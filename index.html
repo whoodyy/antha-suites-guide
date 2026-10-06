@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Antha Suites · Guest Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fbf6ef;--card:#fffdf9;--ink:#2b211a;--mute:#82705f;--line:#eadfd0;--brown:#6e4220;--terra:#b9705b;--soft:#f5e7de;--ph:#fff1b8;--shadow:0 1px 2px rgba(80,50,20,.05),0 8px 24px rgba(80,50,20,.06);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#171210;--card:#231b17;--ink:#f3ebe1;--mute:#b3a291;--line:#3a2e26;--brown:#e6c29b;--terra:#e0937c;--soft:#33251e;--ph:#5c4a17;--shadow:0 8px 24px rgba(0,0,0,.35)}}
+:root[data-theme="dark"]{--bg:#171210;--card:#231b17;--ink:#f3ebe1;--mute:#b3a291;--line:#3a2e26;--brown:#e6c29b;--terra:#e0937c;--soft:#33251e;--ph:#5c4a17;--shadow:0 8px 24px rgba(0,0,0,.35)}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:120px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 "DM Sans",system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+.serif{font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 56px}
+
+.hero{position:relative;padding:34px 0 22px}
+.hero .eyebrow{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--terra);font-weight:700}
+.hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;font-size:clamp(52px,14vw,84px);line-height:.92;margin:10px 0 0;color:var(--brown);letter-spacing:-.01em}
+.hero h1 em{display:block;font-style:normal;color:var(--terra);font-size:.62em;margin-top:6px}
+.hero p{max-width:440px;color:var(--mute);margin:16px 0 0}
+.badge{position:absolute;right:-6px;top:22px;width:92px;height:92px;color:var(--terra);opacity:.9}
+.badge text{font:600 10.5px "DM Sans",sans-serif;letter-spacing:.32em;fill:currentColor}
+@media(max-width:420px){.badge{width:70px;height:70px;top:10px}}
+
+.stay{background:var(--brown);color:#fff8ee;border-radius:22px;padding:20px 20px 18px;box-shadow:var(--shadow);margin-top:6px}
+:root[data-theme="dark"] .stay,:root:not([data-theme="light"]) .stay{--s:1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stay{background:#3a2a1e;color:#f3e3cf}}
+.stay .row{display:flex;align-items:center;gap:12px}
+.stay .pt{flex:0 0 auto}.stay .pt small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.stay .pt b{font:600 30px/1.1 "Cormorant Garamond",Georgia,serif}
+.stay .pt:last-child{text-align:right}
+.stay .line{flex:1;height:2px;background:repeating-linear-gradient(90deg,rgba(255,248,238,.55) 0 6px,transparent 6px 12px);position:relative}
+.stay .line::after{content:"🌙";position:absolute;left:50%;top:-12px;transform:translateX(-50%);font-size:18px;background:var(--brown);padding:0 6px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .stay .line::after{background:#3a2a1e}}
+.stay p{margin:12px 0 0;font-size:13.5px;opacity:.85}
+
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0}
+.quick a{display:flex;flex-direction:column;align-items:center;gap:6px;text-decoration:none;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 6px;font-size:12.5px;font-weight:500;text-align:center;box-shadow:var(--shadow);transition:transform .15s}
+.quick a:active{transform:scale(.97)}
+.quick .i{font-size:22px;width:42px;height:42px;display:grid;place-items:center;background:var(--soft);border-radius:50%}
+@media(max-width:380px){.quick{grid-template-columns:repeat(2,1fr)}}
+
+.bar{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);margin:0 -18px;padding:10px 18px 8px;border-bottom:1px solid var(--line)}
+.search{position:relative}
+.search input{width:100%;padding:12px 16px 12px 42px;border-radius:14px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-size:15px}
+.search input:focus,.chip:focus-visible,summary:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--terra);outline-offset:2px}
+.search::before{content:"⌕";position:absolute;left:15px;top:8px;font-size:22px;color:var(--mute)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--mute);padding:7px 14px;border-radius:99px;font:500 13.5px "DM Sans",sans-serif;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--brown);border-color:var(--brown);color:var(--bg)}
+
+section{margin-top:34px}
+.sh{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.sh .n{font:600 14px "DM Sans";color:var(--terra);letter-spacing:.1em}
+.sh h2{font:600 30px/1.1 "Cormorant Garamond",Georgia,serif;color:var(--brown);margin:0}
+.lead{color:var(--mute);margin:-4px 0 14px;font-size:15px}
+.cards{display:grid;gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+.card h3{margin:0 0 4px;font-size:16px}.card p{margin:0;color:var(--mute);font-size:14.5px}
+.steps .card{display:flex;gap:14px;align-items:flex-start}
+.num{flex:0 0 34px;height:34px;border-radius:50%;background:var(--soft);color:var(--terra);display:grid;place-items:center;font:700 16px "Cormorant Garamond",serif}
+.req{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--terra);color:#fff;border-radius:6px;padding:1px 7px;margin-left:6px;vertical-align:2px}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:10px;box-shadow:var(--shadow)}
+summary{cursor:pointer;padding:15px 16px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;border-radius:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:0 0 26px;height:26px;border-radius:50%;background:var(--soft);color:var(--terra);display:grid;place-items:center;font-size:18px}
+details[open] summary::after{content:"–"}
+.a{padding:0 16px 16px;color:var(--ink);font-size:15px}.a p{margin:0 0 8px}.a ul,.a ol{padding-left:20px;margin:6px 0}.a li{margin:4px 0}
+.fee{display:inline-block;background:var(--soft);color:var(--brown);font-weight:700;border-radius:8px;padding:1px 9px;font-size:14px}
+
+.price{display:grid;gap:8px}.price div{display:flex;justify-content:space-between;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.price span{color:var(--ink)}.price b{font:600 22px "Cormorant Garamond",serif;color:var(--brown)}
+.price small{color:var(--mute);display:block;font-size:12.5px}
+.tag{font-size:12px;font-weight:700;color:var(--terra);letter-spacing:.06em;text-transform:uppercase;margin:16px 0 8px}
+
+.calc{background:var(--soft);border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:14px}
+.calc h3{margin:0 0 12px;font:600 22px "Cormorant Garamond",serif;color:var(--brown)}
+.seg{display:flex;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:3px;margin-bottom:12px}
+.seg button{flex:1;border:0;background:none;color:var(--mute);padding:8px;border-radius:9px;font:500 14px "DM Sans";cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--brown);color:var(--bg)}
+.step{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.step .c{display:flex;align-items:center;gap:14px}.step .c button{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--card);color:var(--brown);font-size:20px;cursor:pointer}
+.step .c output{min-width:24px;text-align:center;font-weight:700;font-size:18px}
+.total{display:flex;justify-content:space-between;align-items:baseline;border-top:1px dashed var(--mute);padding-top:12px}
+.total b{font:600 34px "Cormorant Garamond",serif;color:var(--brown)}
+.note{color:var(--mute);font-size:12.5px;margin:8px 0 0}
+
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:520px){.rules{grid-template-columns:1fr}}
+.rule{display:flex;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px}
+.rule .e{font-size:22px;flex:0 0 auto}.rule p{margin:0;font-size:14.5px;line-height:1.45}
+.pen{display:inline-block;margin-top:6px;font-size:12px;font-weight:700;color:#fff;background:var(--terra);border-radius:99px;padding:2px 10px}
+.rule.hot{border-color:var(--terra)}
+
+.check label{display:flex;gap:12px;align-items:center;padding:13px 16px;background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:8px;cursor:pointer}
+.check input{width:20px;height:20px;accent-color:var(--terra)}
+.check input:checked+span{text-decoration:line-through;color:var(--mute)}
+.prog{height:6px;background:var(--line);border-radius:9px;overflow:hidden;margin:4px 0 12px}.prog i{display:block;height:100%;width:0;background:var(--terra);transition:width .3s}
+#done{display:none;text-align:center;font:600 22px "Cormorant Garamond",serif;color:var(--terra);padding:6px}
+
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:99px;text-decoration:none;font-weight:700;font-size:14.5px;background:var(--brown);color:var(--bg)}
+.btn.alt{background:var(--soft);color:var(--brown)}
+.sos{margin-top:18px;border:1px solid var(--terra);background:var(--soft);border-radius:16px;padding:14px 16px;font-size:14.5px}
+.ph{background:var(--ph);color:inherit;padding:0 4px;border-radius:4px}
+.wifi code{font:600 15px ui-monospace,SFMono-Regular,Menlo,monospace;background:var(--soft);color:var(--brown);padding:2px 8px;border-radius:6px;user-select:all;word-break:break-all}
+.stars{font-size:28px;letter-spacing:.12em;color:var(--terra);margin:6px 0 0}
+#none{display:none;text-align:center;color:var(--mute);padding:36px 0}
+footer{text-align:center;margin-top:44px;color:var(--mute);font-size:13px}
+footer .serif{font-size:26px;color:var(--brown);display:block}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="hero">
+  <svg class="badge" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="c" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text><textPath href="#c">STAYCATION · STAYCATION ·</textPath></text></svg>
+  <div class="eyebrow">Guest Guide</div>
+  <h1>Welcome<em>to Antha Suites</em></h1>
+  <p>Everything for a smooth, comfortable stay: arrival, check-out, the pool, house rules and who to call.</p>
+</header>
+
+<div class="stay" aria-label="Stay times">
+  <div class="row"><div class="pt"><small>Self check-in</small><b>3:00 PM</b></div><div class="line"></div><div class="pt"><small>Self check-out</small><b>1:00 PM</b></div></div>
+  <p>Check in any time on or after 3:00 PM. Check-out is 1:00 PM the next day.</p>
+</div>
+
+<nav class="quick" aria-label="Quick actions">
+  <a href="https://www.facebook.com/anthasuites/"><span class="i">💬</span>host</a>
+  <a href="#help"><span class="i">🔧</span>Report issue</a>
+  <a href="#pool"><span class="i">🏊</span>Pool</a>
+  <a href="#rules"><span class="i">📋</span>Rules</a>
+</nav>
+
+<div class="bar">
+  <div class="search"><input type="search" id="q" placeholder="Search: wifi, pool, late check-out, towels…" aria-label="Search the guide"></div>
+  <div class="chips" id="chips">
+    <button class="chip" data-c="all" aria-pressed="true">All</button>
+    <button class="chip" data-c="arrival" aria-pressed="false">Arrival</button>
+    <button class="chip" data-c="times" aria-pressed="false">Check-in &amp; out</button>
+    <button class="chip" data-c="addons" aria-pressed="false">Add-ons</button>
+    <button class="chip" data-c="pool" aria-pressed="false">Pool</button>
+    <button class="chip" data-c="rules" aria-pressed="false">Rules</button>
+    <button class="chip" data-c="help" aria-pressed="false">Help</button>
+  </div>
+</div>
+<div id="none">Nothing found. Try another word, or call the host.</div>
+
+<section data-c="arrival" id="arrival">
+  <div class="sh"><span class="n">01</span><h2>Smooth arrival</h2></div>
+  <div class="cards steps">
+    <div class="card item" style="display:block"><h3>📍 Our location</h3><p>Unit 2525 Lush Residences, Bagtikan Street corner Kamagong Street, Barangay San Antonio, Makati City</p><div class="btns"><a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Lush+Residences+Bagtikan+Street+corner+Kamagong+Street+San+Antonio+Makati" target="_blank" rel="noopener">🗺️ Open in Maps</a></div></div>
+    <div class="card item"><span class="num">1</span><div><h3>Bring a valid government-issued ID</h3><p>Present it to the building reception.</p></div></div>
+    <div class="card item"><span class="num">2</span><div><h3>Show your authorization letter <span class="req">Required</span></h3><p>We'll send it before arrival. Present it at reception when you check in, per building policy.</p></div></div>
+    <div class="card item"><span class="num">3</span><div><h3>Use your door passcode</h3><p>We'll send it ahead. It activates at your advised check-in time (3:00 PM).</p></div></div>
+  </div>
+</section>
+
+<section data-c="times" id="times">
+  <div class="sh"><span class="n">02</span><h2>Check-in &amp; check-out</h2></div>
+  <details class="item"><summary>Can I check in early?</summary><div class="a"><p>Yes, upon request and subject to availability. Please tell us <b>at least 4 hours before</b> the standard 3:00 PM check-in.</p><p>Fee: <span class="fee">₱300 / hour</span></p></div></details>
+  <details class="item"><summary>Can I check out late?</summary><div class="a"><p>Check-out time is 1:00 PM. Late check-out is subject to availability (no incoming guest) and requires additional fees. <b>Please ask the host first</b>, at least 4 hours before check-out.</p><p>Fee: <span class="fee">₱300 / hour</span>. Any portion of an hour is charged as a full hour.</p></div></details>
+  <div class="calc item">
+    <h3>Early / late fee estimator</h3>
+    <div class="step"><span>Extra hours</span><div class="c"><button data-t="h" data-d="-1" aria-label="Fewer hours">–</button><output id="hv">1</output><button data-t="h" data-d="1" aria-label="More hours">+</button></div></div>
+    <div class="total"><span>Estimated fee</span><b id="ht">₱300</b></div>
+    <p class="note">₱300 per hour, partial hours count as full hours.</p>
+  </div>
+</section>
+
+<section data-c="addons" id="addons">
+  <div class="sh"><span class="n">03</span><h2>Add-ons</h2></div>
+  <p class="lead">Fresh towels, pillows, blankets and welcome kits are included for 2 guests.</p>
+  <details class="item" open><summary>More than 2 guests?</summary><div class="a"><p>You may request additional sets for <span class="fee">₱300 / person</span>, for up to 2 additional guests.</p></div></details>
+  <div class="tag">Need extra items?</div>
+  <div class="price item">
+    <div><span>🧴 Extra welcome kit</span><b>₱50</b></div>
+    <div><span>🛁 Extra towel</span><b>₱50</b></div>
+    <div><span>🛏️ Extra pillow</span><b>₱100</b></div>
+    <div><span>🧣 Extra blanket</span><b>₱100</b></div>
+  </div>
+  <p class="note">Prices are each. Message the host to request.</p>
+</section>
+
+<section data-c="pool" id="pool">
+  <div class="sh"><span class="n">04</span><h2>Pool access</h2></div>
+  <p class="lead">Let us know in advance so we can purchase the pool tickets on your behalf.</p>
+  <div class="price item">
+    <div><span>Weekday<small>per guest, per day</small></span><b>₱150</b></div>
+    <div><span>Weekend<small>per guest, per day</small></span><b>₱300</b></div>
+    <div><span>Mondays<small>closed for maintenance</small></span><b>🚫</b></div>
+  </div>
+  <div class="calc item">
+    <h3>Pool cost estimator</h3>
+    <div class="seg" role="group" aria-label="Day type"><button id="wd" aria-pressed="true">Weekday</button><button id="we" aria-pressed="false">Weekend</button></div>
+    <div class="step"><span>Guests</span><div class="c"><button data-t="g" data-d="-1" aria-label="Fewer guests">–</button><output id="gv">2</output><button data-t="g" data-d="1" aria-label="More guests">+</button></div></div>
+    <div class="total"><span>Total per day</span><b id="gt">₱300</b></div>
+  </div>
+  <details class="item" style="margin-top:12px"><summary>How do I buy pool tickets?</summary><div class="a"><ol><li>Message the host with your dates and number of guests.</li><li>We buy the tickets on your behalf.</li><li>Pay the pool fee to the host.</li></ol><p class="note">Payment method: <mark class="ph">GCash / BDO / BPI </mark></p></div></details>
+</section>
+
+<section data-c="rules" id="rules">
+  <div class="sh"><span class="n">05</span><h2>House rules</h2></div>
+  <div class="rules item">
+    <div class="rule hot"><span class="e">🚭</span><div><p><b>Strictly no smoking or vaping</b> inside the unit.</p><span class="pen">Penalty ₱5,000</span></div></div>
+    <div class="rule hot"><span class="e">👕</span><div><p><b>Do not hang clothes</b> or items on the balcony.</p><span class="pen">Penalty ₱1,000</span></div></div>
+    <div class="rule"><span class="e">👥</span><p>Registered guests only. No unregistered visitors or overnight guests.</p></div>
+    <div class="rule"><span class="e">🎉</span><p>No parties or events.</p></div>
+    <div class="rule"><span class="e">🤫</span><p>Keep noise to a minimum. Building penalties may apply.</p></div>
+    <div class="rule"><span class="e">🐾</span><p>No pets allowed. Sorry, building policy.</p></div>
+    <div class="rule"><span class="e">🍳</span><p>Light cooking only. Avoid strong-smelling foods. Clean as you go and wash used dishes.</p></div>
+    <div class="rule"><span class="e">💡</span><p>Turn off all lights, aircon and appliances when you leave the unit.</p></div>
+    <div class="rule"><span class="e">🛋️</span><p>Keep furniture and décor in their original positions.</p></div>
+    <div class="rule"><span class="e">🗑️</span><p>Dispose of trash properly in the trash bin.</p></div>
+    <div class="rule"><span class="e">🧺</span><p>Don't remove items provided: towels, linens, kitchenware, remotes or décor.</p></div>
+    <div class="rule"><span class="e">🛠️</span><p>Treat the unit with care. Report any accidental damage immediately.</p></div>
+    <div class="rule"><span class="e">🏋️</span><p>The building gym is not available to guests, per building policy.</p></div>
+  </div>
+  <details class="item" style="margin-top:14px"><summary>What am I responsible for?</summary><div class="a"><p>Guests are responsible for any damages, penalties, missing items, excessive cleaning or building policy violations during their stay. The security deposit may be forfeited for, but not limited to:</p><ul><li>Permanent or hard-to-remove stains on linens, towels, sofa, rugs or upholstery</li><li>Broken furniture, décor, mirrors, appliances or kitchenware</li><li>Burns, scratches, dents or cracks on walls, floors, countertops, appliances or fixtures</li><li>Missing towels, kitchenware, remotes, keys or other provided items</li><li>Indoor smoking or vaping needing odor removal or deep cleaning</li><li>Excessive cleaning from spills, stains, trash or improper disposal</li><li>Building fines from rule violations</li><li>Damage caused by unauthorized guests or parties</li></ul></div></details>
+</section>
+
+<section data-c="times rules" id="checkout">
+  <div class="sh"><span class="n">06</span><h2>Before check-out</h2></div>
+  <div class="item check">
+    <div class="prog"><i id="pb"></i></div>
+    <label><input type="checkbox"><span>Clean as you go: wash used dishes</span></label>
+    <label><input type="checkbox"><span>Dispose of trash properly</span></label>
+    <label><input type="checkbox"><span>Turn off all lights, aircon and appliances</span></label>
+    <div id="done">All set. Thank you! ✨</div>
+  </div>
+</section>
+
+<section data-c="help" id="help">
+  <div class="sh"><span class="n">07</span><h2>Need help?</h2></div>
+  <details class="item" open><summary>Something is broken or not working</summary><div class="a"><ol><li>Don't force it or try to fix it yourself.</li><li>Take a quick photo or video.</li><li>Message the host with what happened.</li><li>We'll arrange a fix or a quick solution.</li></ol><p>Accidents happen. Please report damage right away.</p></div></details>
+  <details class="item wifi" open><summary>📶 Wi-Fi details</summary><div class="a"><p>Network: <code>WOOFY_C9AD_5G</code></p><p>Password: <code>78303b7ec9ad</code></p><p class="note">Tip: tap a value to select it, then copy.</p></div></details>
+  <details class="item"><summary>Locked out or door code not working?</summary><div class="a"><p>Call the host right away. Your passcode activates at your check-in time (3:00 PM).</p></div></details>
+  <details class="item" open><summary>How do I contact the host?</summary><div class="a"><ul><li><b>Booked on Airbnb:</b> send a message directly in Airbnb.</li><li><b>Booked on Facebook:</b> send a message directly in Facebook.</li></ul></div></details>
+  <div class="btns item"><a class="btn" href="https://www.instagram.com/anthasuites">💬 Instagram </a><a class="btn alt" href="https://www.facebook.com/anthasuites/">💬 Facebook</a></div>
+  <p class="note item"><mark class="ph"></mark></p>
+  <div class="sos item"><b>Emergency?</b> Fire, medical, or security emergency: <b>Call 911     </b> Once you are safe, please inform your host so they can assist you with the next steps.</div>
+</section>
+
+<section data-c="review" id="review">
+  <div class="sh"><span class="n">08</span><h2>Leave us a review</h2></div>
+  <div class="card item"><p>We hope you enjoyed your time here. Please consider leaving us a review. We love to hear from our guests.</p><div class="stars" aria-label="Five stars">★★★★★</div><p class="serif" style="font-size:24px;color:var(--brown);margin-top:6px"><i>Thank you,</i></p></div>
+</section>
+
+<footer><span class="serif">Antha Suites</span>Thank you for staying with us <br></footer>
+</div>
+<script>
+var cat='all',q=document.getElementById('q'),none=document.getElementById('none');
+function apply(){
+  var t=q.value.toLowerCase().trim(),shown=0;
+  document.querySelectorAll('section').forEach(function(s){
+    var okc=cat==='all'||s.dataset.c.split(' ').indexOf(cat)>-1,any=false;
+    s.querySelectorAll('.item').forEach(function(i){
+      var m=!t||i.textContent.toLowerCase().indexOf(t)>-1;
+      i.style.display=m?'':'none';
+      if(m){any=true;if(t&&i.tagName==='DETAILS')i.open=true}
+    });
+    var vis=okc&&any;s.style.display=vis?'':'none';if(vis)shown++;
+  });
+  none.style.display=shown?'none':'block';
+}
+q.addEventListener('input',apply);
+document.getElementById('chips').addEventListener('click',function(e){
+  var b=e.target.closest('.chip');if(!b)return;
+  cat=b.dataset.c;document.querySelectorAll('.chip').forEach(function(c){c.setAttribute('aria-pressed',c===b)});
+  apply();window.scrollTo({top:document.querySelector('.bar').offsetTop-4,behavior:'smooth'});
+});
+/* estimators */
+var g=2,h=1,we=false;
+function fmt(n){return '₱'+n.toLocaleString('en-PH')}
+function calc(){
+  document.getElementById('gv').textContent=g;
+  document.getElementById('gt').textContent=fmt(g*(we?300:150));
+  document.getElementById('hv').textContent=h;
+  document.getElementById('ht').textContent=fmt(h*300);
+  document.getElementById('wd').setAttribute('aria-pressed',!we);
+  document.getElementById('we').setAttribute('aria-pressed',we);
+}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button[data-t]');
+  if(b){var d=+b.dataset.d;if(b.dataset.t==='g')g=Math.min(10,Math.max(1,g+d));else h=Math.min(8,Math.max(1,h+d));calc();}
+  if(e.target.id==='wd'){we=false;calc()}if(e.target.id==='we'){we=true;calc()}
+});
+calc();
+/* checklist */
+var cb=document.querySelectorAll('.check input');
+cb.forEach(function(c){c.addEventListener('change',function(){
+  var n=document.querySelectorAll('.check input:checked').length;
+  document.getElementById('pb').style.width=(n/cb.length*100)+'%';
+  document.getElementById('done').style.display=n===cb.length?'block':'none';
+})});
+document.querySelectorAll('.quick a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){cat='all';apply()})});
+</script>
+</body>
+</html>
